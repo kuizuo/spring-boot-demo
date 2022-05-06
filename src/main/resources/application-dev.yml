@@ -1,0 +1,19 @@
+server:
+  port: 8090
+
+#配置数据源
+spring:
+  devtools:
+    restart:
+      enabled: true
+  datasource:
+    druid:
+      db-type: com.alibaba.druid.pool.DruidDataSource
+      driverClassName: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:demo}?serverTimezone=Asia/Shanghai&characterEncoding=utf8&useSSL=false
+      username: ${DB_USER:root}
+      password: ${DB_PWD:a123456}
+
+swagger:
+  enabled: true
+
